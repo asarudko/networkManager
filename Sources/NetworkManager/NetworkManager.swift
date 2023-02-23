@@ -15,6 +15,12 @@ public struct NetworkManager {
     ///The environment to be used by the Network Manager.
     private let environment: AppEnvironment
     
+    /// Network Manager init
+    /// - Parameter environment: The environment to be used by the Network Manager.
+    public init(environment: AppEnvironment) {
+        self.environment = environment
+    }
+    
     /// Downloads the contents of a resource asynchronously.
     /// - Parameters:
     ///   - resource: Endpoint resource

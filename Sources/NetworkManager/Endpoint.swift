@@ -19,4 +19,17 @@ public struct Endpoint<T: Decodable> {
     var method = HTTPMethod.get
     /// HTTP Request Header
     var headers = [String: String]()
+    
+    /// Endpoint init
+    /// - Parameters:
+    ///   - path:  URL Path
+    ///   - type: Decode Type
+    ///   - method: HTTP Method
+    ///   - headers: HTTP Request Header
+    public init(path: String, type: T.Type, method: HTTPMethod = HTTPMethod.get, headers: [String : String] = [String: String]()) {
+        self.path = path
+        self.type = type
+        self.method = method
+        self.headers = headers
+    }
 }
